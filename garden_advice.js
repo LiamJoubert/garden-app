@@ -1,8 +1,6 @@
-
+//input for the season and plant the user wants advice on
 let season = prompt("Enter the season (e.g., summer or winter):");
 let plantType = prompt("Enter the plant type (e.g., flower or vegetable):");
-
-
 
 /**
  * Object containing our seasons and plants advice. In place so we can add new advice easily
@@ -26,13 +24,9 @@ const adviceData = {
 };
 
 
-// Variable to hold gardening advice
+// Variable to hold gardening advice (Our final output in the console)
 let advice = "";
 
-/**
- * returns advice based on the inputted season
- */
-// Determine advice based on the season
 
 /**
  * Have refactored again based on our new advice object. 
@@ -50,7 +44,10 @@ function plantAdvice(plantType) {
 }
 
 
-// Log the generated advice to the console
+/**
+ * Puts the advice from the season and plant together and outputs it in the console
+ * (Potential refactoring here at some point. )
+ */
 advice += seasonAdvice(season);
 advice += plantAdvice(plantType);
 console.log(advice);
